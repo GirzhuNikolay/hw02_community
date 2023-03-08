@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html> 
+<html lang="ru">          
+  <head>       
+  </head>
+  <body>       
+    <header>
+      {% include 'includes/header.html' %}
+    </header>
+    <main>
+      {% block content %}
+          Это главная страница проекта
+      {% endblock %}
+    </main>
+    <footer>
+      {% include 'includes/footer.html' %} 
+    </footer>
+  </body>
+</html>
