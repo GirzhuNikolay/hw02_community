@@ -13,20 +13,20 @@
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Главная страница Yatube</title>
+    <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
+    <title>{{ title }}</title>
   </head>
   <body>       
-    <header>
+    {% block header %}
       {% include 'includes/header.html' %}
-    </header>
+    {% endblock %}
     <main>
       {% block content %}
           Это главная страница проекта
-      {% endblock %}
+      {% endblock content %}
     </main>
-    <footer>
+    {% block footer %}
       {% include 'includes/footer.html' %} 
-    </footer>
+    {% endblock %}
   </body>
 </html>
