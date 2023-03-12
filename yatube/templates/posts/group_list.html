@@ -3,7 +3,7 @@
   Записи сообщества {{group.title}}
 {% endblock %}
 {% block content %}
-  <h3>{{group.title}}</h3>
+  {{group.title}}
   <p>{{group.description|linebreaks }}</p>
   {% for post in posts %}
     <ul>
